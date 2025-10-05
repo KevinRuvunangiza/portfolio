@@ -16,6 +16,7 @@ const projectData: Project[] = [
       "A full-stack academic toolkit I founded and built to solve the stress of university referencing. The app gained over 250 users in two weeks from a single post and now ranks among the top 10 search results on Google for its brand name. The core feature is a 'Magic Bar' that auto-fills citations from URLs, PDFs, and more, using a modular engine to support specific university style guides.",
     technologies: ["React.js", "Supabase", "SQL", "JavaScript"],
     liveUrl: "https://studentoss.netlify.app/",
+    imageUrl: "./src/assets/StudentOS_Landing_Page.png"
   },
   {
     name: "PROJECT NAME",

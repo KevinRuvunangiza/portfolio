@@ -1,4 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
+import { useState } from "react";
 
 // --- TYPE DEFINITIONS ---
 interface Project {
@@ -17,6 +18,8 @@ interface ProjectItemProps {
 
 // --- ProjectItem Component ---
 export default function ProjectItem({ project, isReversed = false }: ProjectItemProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  
   // Provide default values if project is undefined
   if (!project) {
     project = {
@@ -78,13 +81,25 @@ export default function ProjectItem({ project, isReversed = false }: ProjectItem
         </div>
       </div>
 
-      {/* Image content */}
+      {/* Image content with hover animation */}
       <div className="flex-1 flex justify-center items-center w-full">
-        <div className="w-full h-48 md:h-56 bg-gray-700/50 rounded-lg shadow-lg">
+        <div 
+          className="w-full max-w-[800px] aspect-video rounded-4xl shadow-lg overflow-hidden cursor-pointer "
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           {imageUrl ? (
-            <img src={imageUrl} alt={name} className="w-full h-full object-cover rounded-lg" />
+            <img 
+              src={imageUrl} 
+              alt={name} 
+              className={`w-full h-full object-contain rounded-lg transition-all duration-500 ease-out ${
+                isHovered ? 'scale-105 brightness-110' : 'scale-100 brightness-100'
+              }`}
+            />
           ) : (
-            <div className="w-full h-full bg-gray-800 rounded-lg"></div>
+            <div className={`w-full h-full bg-gray-800 rounded-lg transition-all duration-500 ${
+              isHovered ? 'bg-gray-700 scale-105' : 'bg-gray-800 scale-100'
+            }`}></div>
           )}
         </div>
       </div>
