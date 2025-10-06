@@ -84,7 +84,7 @@ export default function ProjectItem({ project, isReversed = false }: ProjectItem
       {/* Image content with hover animation */}
       <div className="flex-1 flex justify-center items-center w-full">
         <div 
-          className="w-full max-w-[800px] aspect-video rounded-4xl shadow-lg overflow-hidden cursor-pointer "
+          className="w-full max-w-[800px] aspect-video rounded-2xl shadow-lg overflow-hidden cursor-pointer "
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -92,7 +92,7 @@ export default function ProjectItem({ project, isReversed = false }: ProjectItem
             <img 
               src={imageUrl} 
               alt={name} 
-              className={`w-full h-full object-contain rounded-lg transition-all duration-500 ease-out ${
+              className={`w-full h-full object-cover transition-all duration-500 ease-out ${
                 isHovered ? 'scale-105 brightness-110' : 'scale-100 brightness-100'
               }`}
             />
