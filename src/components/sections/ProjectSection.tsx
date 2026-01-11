@@ -19,16 +19,18 @@ const projectData: Project[] = [
     imageUrl: "./src/assets/StudentOS_Landing_Page.png"
   },
   {
-    name: "PROJECT NAME",
+    name: "Pink and Purple",
     description:
       "Lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum.",
-    technologies: ["Technology", "Technology", "Technology"],
+    technologies: ["React.js", "Supabase", "Typescript","Tailwind"],
+    liveUrl: "https://pinkandp.com/"
   },
   {
-    name: "PROJECT NAME",
+    name: "EXP.me",
     description:
       "Plorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum.",
-    technologies: ["Technology", "Technology", "Technology"],
+    technologies: ["React.js", "Supabase", "Technology"],
+    liveUrl: "https://exp-me.netlify.app/"
   },
 ];
 
